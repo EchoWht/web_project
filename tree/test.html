@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的商城</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../css/member.css">
+    <link rel="stylesheet" type="text/css" href="../../css_v0607/member.css">
+</head>
+<body class="member-body">
+<header id="header"></header>
+<!-- new style-->
+<div class="scroller-body">
+    <div class="scroller-box">
+        <div class="member-top">
+            <div class="member-info">
+                <div class="user-avatar"><img src="" id="avatar"></div>
+                <div class="user-name"><span>wht<sup>V0</sup></span></div>
+            </div>
+            <div class="member-collect"><span><a href="favorites.html"><em>0</em><p>商品收藏</p></a> </span><span><a
+                    href="favorites_store.html"><em>0</em><p>店铺收藏</p></a> </span><span><a href="views_list.html"><i
+                    class="goods-browse"></i><p>我的足迹</p></a> </span></div>
+        </div>
+        <div class="member-center">
+            <dl class="mt5">
+                <dt><a href="order_list.html">
+                    <h3><i class="mc-01"></i>我的订单</h3>
+                    <h5>查看全部订单<i class="arrow-r"></i></h5>
+                </a></dt>
+                <dd>
+                    <ul id="order_ul">
+                        <li><a href="order_list.html?data-state=state_new"><i class="cc-01"></i>
+                            <p>待付款</p></a></li>
+                        <li><a href="order_list.html?data-state=state_send"><i class="cc-02"></i>
+                            <p>待收货</p></a></li>
+                        <li><a href="order_list.html?data-state=state_notakes"><i class="cc-03"></i>
+                            <p>待自提</p></a></li>
+                        <li><a href="order_list.html?data-state=state_noeval"><i class="cc-04"></i>
+                            <p>待评价</p></a></li>
+                        <li><a href="member_refund.html"><i class="cc-05"></i>
+                            <p>退款/退货</p></a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="mt5">
+                <dt><a href="member_asset.html">
+                    <h3><i class="mc-02"></i>我的财产</h3>
+                    <h5>查看全部财产<i class="arrow-r"></i></h5>
+                </a></dt>
+                <dd>
+                    <ul id="asset_ul">
+                        <li><a href="predepositlog_list.html"><i class="cc-06"></i>
+                            <p>预存款</p></a></li>
+                        <li><a href="rechargecardlog_list.html"><i class="cc-07"></i>
+                            <p>充值卡</p></a></li>
+                        <li><a href="voucher_list.html"><i class="cc-08"></i>
+                            <p>代金券</p></a></li>
+                        <li><a href="redpacket_list.html"><i class="cc-09"></i>
+                            <p>红包</p></a></li>
+                        <li><a href="pointslog_list.html"><i class="cc-10"></i>
+                            <p>积分</p></a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="mt5">
+                <dt><a href="address_list.html">
+                    <h3><i class="mc-03"></i>收货地址管理</h3>
+                    <h5><i class="arrow-r"></i></h5>
+                </a></dt>
+            </dl>
+            <dl style="border-top: solid 0.05rem #EEE;">
+                <dt><a href="member_account.html">
+                    <h3><i class="mc-04"></i>用户设置</h3>
+                    <h5><i class="arrow-r"></i></h5>
+                </a></dt>
+            </dl>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="nctouch-footer-wrap posr">
+            <div class="nav-text"><a href="http://shopnc.dev/wap/tmpl/member/member.html">我的商城</a><a id="logoutbtn"
+                                                                                                     href="javascript:void(0);">注销</a><a
+                    href="http://shopnc.dev/wap/tmpl/member/member_feedback.html">反馈</a><a href="javascript:void(0);"
+                                                                                           class="gotop">返回顶部</a></div>
+            <div class="nav-pic"><a href="http://shopnc.dev/shop/index.php?act=mb_app" class="app"><span><i></i></span>
+                <p>客户端</p></a><a href="javascript:void(0);" class="touch"><span><i></i></span>
+                <p>触屏版</p></a><a href="http://shopnc.dev/shop" class="pc"><span><i></i></span>
+                <p>电脑版</p></a></div>
+            <div class="copyright">Copyright&nbsp;©&nbsp;2005-2016 <a href="javascript:void(0);">好商城V4 www.haoid.cn</a>版权所有
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- new style-->
+<div class="m-top clearfix">
+    <div class="m-avatar fleft">
+        <img src=""/>
+    </div>
+    <div class="m-infor fleft">
+        <div class="m-name mt10">
+            昵称：<span id="username"></span>
+        </div>
+        <div class="m-name mt10">
+            <span id="otherinfo"></span>
+        </div>
+        <div class="clearfix mt10">
+                <span class="m-jifen">
+                    <span>红包</span>
+                    <span class="clr-d94" id="point"></span>
+                </span>
+                 <span class="m-yue">
+                      <span>余额</span>
+                      <span class="clr-d94" id="predepoit"></span>
+                 </span>
+				 <span class="m-yue">
+                      <span>万特币</span>
+                      <span class="clr-d94" id="gouwubi"></span>
+                 </span>
+        </div>
+    </div>
+</div>
+<div class="m-center">
+    <ul class="mc-cnt">
+        <li>
+            <a id="tuiguanga" href="">
+                <i class="im-collect"></i>
+                分享链接
+                <span class="grayrightarrow"></span>
+            </a>
+        </li>
+        <li>
+            <a href="order_list.html">
+                <i class="im-order"></i>
+                我的订单
+                <span class="grayrightarrow"></span>
+            </a>
+        </li>
+        <li>
+            <a href="tixian.html">
+                <i class="im-order"></i>
+                余额提现
+                <span class="grayrightarrow"></span>
+            </a>
+        </li>
+        <li>
+            <a href="tixian_list.html">
+                <i class="im-quan"></i>
+                提现记录
+                <span class="grayrightarrow"></span>
+            </a>
+        </li>
+        <li>
+            <a href="yuezhuanzhang.html">
+                <i class="im-order"></i>
+                余额转账
+                <span class="grayrightarrow"></span>
+            </a>
+        </li>
+        <li>
+            <a href="yuezhuanzhang_list.html">
+                <i class="im-quan"></i>
+                转账记录
+                <span class="grayrightarrow"></span>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.cnwante.com/shop/index.php?act=pointshop&op=index">
+                <i class="im-collect"></i>
+                红包中心
+                <span class="grayrightarrow"></span>
+            </a>
+        </li>
+        <li>
+            <a href="chongzhi.html">
+                <i class="im-address"></i>
+                万特币充值
+                <span class="grayrightarrow"></span>
+            </a>
+        </li>
+        <li>
+            <a href="paypwd.html">
+                <i class="im-history"></i>
+                设置支付密码
+                <span class="grayrightarrow"></span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="footer" id="footer"></div>
+<script type="text/javascript" src="../../js/config.js"></script>
+<script type="text/javascript" src="../../js/zepto.min.js"></script>
+<script type="text/javascript" src="../../js/template.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/tmpl/common-top.js"></script>
+<script type="text/javascript" src="../../js/tmpl/member.js"></script>
+<script type="text/javascript" src="../../js/tmpl/footer.js"></script>
+</body>
+</html>
